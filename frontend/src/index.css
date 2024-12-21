@@ -1,0 +1,173 @@
+/*palette url :  https://coolors.co/b80000-820300-ff9800-000000-ffffff*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: "Ubuntu", sans-serif;
+}
+
+:root{
+  --primary : #820300;
+  --secondary : #B80000;
+  --limon : #FF9800;
+  --black : #0C0C0C;
+  --white : #FFFFFF;
+  --gray:#bbbaba;
+  --gray1:#e0e0e0;
+  --gradien1 : linear-gradient(90deg, rgba(130,3,0,1) 0%, rgba(184,0,0,1) 76%, rgba(255,152,0,1) 100%);
+  --gradien2 : linear-gradient(90deg, rgba(130,3,0,1) 0%, rgba(184,0,0,1) 49%, rgba(12,12,12,1) 100%);
+  --gradien3 : linear-gradient(90deg, rgba(130,3,0,1) 0%, rgba(184,0,0,1) 49%,rgba(130,3,0,1)100%);
+
+}
+
+
+/*--------- login ------------*/
+.login-section{
+  display: flex;
+  height: 100vh;
+}
+
+.login-section-main{
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  width: max-content;
+  margin: auto;
+  box-shadow: 2px 2px 5px var(--gray);
+  padding-bottom: 3rem;
+  border-radius: 8px;
+
+}
+.login-section-toplogo{
+  background: var(--primary);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  
+  text-align: center;
+}
+.login-section-main-header{
+  width: 80%;
+  margin: 16px auto;
+}
+.login-section-role {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Ensures equal spacing between items */
+  border-bottom: var(--secondary) 1px solid;
+  padding-top: 8px;
+  margin-bottom: 2rem;
+}
+
+.login-section-role p {
+  flex: 1 1 33%; /* Flex-grow, flex-shrink, and flex-basis */
+  text-align: center; /* Center text inside each <p> */
+  padding: 10px; /* Optional: Adds padding inside each <p> */
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+  cursor: pointer;
+  transition-duration: 0.5s;
+  font-weight: 700;
+  font-size: 1em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.login-section-role p:not(:last-child) {
+  border-right: 1px solid var(--primary); /* Replace with your desired color */
+}
+
+
+.login-section-main-header h3{
+  color: var(--primary);
+  font-weight: 600;
+  margin: 8px 0;
+  font-size: 18px;
+}
+.login-section-main-header p {
+  color: var(--gray);
+  font-size: 12px;
+  margin: 8px 0;
+}
+.login-section-main form{
+  width: 80%;
+  margin: 0 auto;
+}
+.login-section-main form > *{
+  margin: 8px 0;
+}
+.remember-me{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.remember-me >*{
+  font-size: 12px;
+}
+.footer-link-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+@media only screen and (max-width: 600px){
+  .login-section-cover{
+    display: none;
+  }
+  .login-section-main{
+    width: 90%;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .cover-img{
+      display: none;
+  }
+  .cover-info{
+      width: 100%;
+  }
+}
+/*-------------Register section ------------------*/
+.register-section{
+  display: flex;
+  flex-direction: column;
+}
+
+.register-section-logo img{
+  width: 90px;
+}
+.register-section-main{
+  width: 80%;
+  margin: 1em auto;
+}
+.register-main-title{
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gray);
+}
+.register-main-title-icon{
+  font-size: 30px;
+  background: var(--secondary);
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: var(--white);
+}
+.register-main-title p {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 12px;
+  color: var(--secondary);
+}
+
+.form_inputs{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

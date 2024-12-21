@@ -1,0 +1,287 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: var(--gradien2);
+    transition: top 0.5s ease;
+}
+
+.header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust as needed */
+    background: var(--gradien2);
+}
+
+.header-top{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    margin:auto;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--limon);
+}
+.header-top-info{
+    display: flex;
+}
+.header-top-info a {
+    margin: auto 16px;
+    color: var(--white);
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+.header-top-info a:hover , .header-top-sm-link:hover{
+    color: var(--limon);
+}
+.header-top-sm{
+    display: flex;
+    align-items: center;
+}
+.header-top-sm-link{
+    color: var(--white);
+    font-size: 16px;
+    margin: 0 8px;
+    transition-duration: 0.5s;
+}
+.header-bottom{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+}
+/* Navbar.css */
+.navbar-groupe-link {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .navbar-link {
+    position: relative;
+    text-decoration: none;
+    color: var(--white);
+    transition: opacity 0.5s ease;
+  }
+  
+  .navbar-link::before {
+    content: '';
+    position: absolute;
+    left: -10px; /* Adjust based on your desired position */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-link:hover::before {
+    background-color: var(--limon); /* Change to desired circle color */
+  }
+  
+  .navbar-link:hover {
+    opacity: 1;
+    color: var(--limon);
+  }
+  
+  .navbar:hover .navbar-link:not(:hover) {
+    opacity: 0.5;
+  }
+
+.header-bottom-logo img{
+    width: 80px;
+}
+.header-bottom-links{
+    display: flex;
+    gap: 15px;
+}
+.header-bottom-link{
+    background: var(--primary);
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: var(--white);
+    box-shadow: 2px 2px 5px var(--white);
+    transition-duration: 0.5s;
+}
+.header-bottom-link:hover{
+    color: var(--limon);
+    box-shadow: 2px 2px 5px var(--limon);
+    transform: translateY(-4px);
+}
+.header-bottom-icon-login-link , .toggle-menu{
+    color: var(--white);
+    font-size: 16px;
+    background-color: var(--primary);
+    padding: 8px;
+    border-radius:4px;
+    box-shadow: 2px 2px 5px var(--white);
+    transition-duration: 0.5s;
+    display: none;
+}
+.header-bottom-icon-login-link:hover , .toggle-menu:hover{
+    color: var(--limon);
+    box-shadow: 2px 2px 5px var(--limon);
+    transform: translateY(-4px);
+}
+.close-navbar-icon{
+    color: var(--white);
+    width: max-content;
+    font-size: 16px;
+    background-color: var(--primary);
+    padding: 8px;
+    border-radius:4px;
+    box-shadow: 2px 2px 5px var(--white);
+    transition-duration: 0.5s;
+}
+.close-navbar-icon:hover{
+    color: var(--limon);
+    box-shadow: 2px 2px 5px var(--limon);
+    transform: translateY(-4px);
+}
+.navbar-footer , .navbar-header{
+    display: none;
+}
+.header-section{
+    margin: 2em 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+.header-section .nom{
+    background: var(--limon);
+    width: max-content;
+    padding: 4px 16px;
+    border-radius: 50px;
+    color: var(--primary);
+    margin: auto;
+    font-style: italic;
+    font-weight: 600;
+}
+.header-section .title{
+    font-size: 24px;
+    font-weight: 700;
+}
+.header-section .desc{
+    color: var(--gray);
+}
+/*--------------header section--------------------*/
+/* CSS for devices with a screen width of up to 600 pixels */
+@media only screen and (max-width: 600px) {
+    .header-top{
+        display: none;
+    }
+    .header-bottom-icon-login-link , .toggle-menu{
+        display: block;
+    }
+    .header-bottom-links{
+        display: none;
+    }
+    .navbar{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        width: 70vw;
+        background: var(--gradien3);
+        transition: left 0.5s ease;
+        z-index: 2;
+    }
+    .navbar.open{
+        left: 0;
+    }
+    .navbar-footer , .navbar-header{
+        display: block;
+    }
+    .navbar-header{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px;
+        border-bottom: 1px solid var(--limon);
+    }
+    .navbar-groupe-link{
+        flex-direction: column;
+        width: 90%;
+        margin: 15px auto;
+    }
+    .navbar-footer{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 15px auto;
+        gap: 15px;
+
+    }
+    .navbar-footer > *{
+        width: 50%;
+    }
+  }
+  
+  /* CSS for devices with a screen width between 601px and 900px */
+  @media only screen and (min-width: 601px) and (max-width: 900px) {
+    /* CSS rules for screens between 601px and 900px wide */
+    .header-top{
+        display: none;
+    }
+    .header-bottom-icon-login-link , .toggle-menu{
+        display: block;
+    }
+    .header-bottom-links{
+        display: none;
+    }
+    .navbar{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        width: 50vw;
+        background: var(--gradien1);
+        transition: left 0.5s ease;
+        z-index: 2;
+    }
+    .navbar.open{
+        left: 0;
+    }
+    .navbar-footer , .navbar-header{
+        display: block;
+    }
+    .navbar-header{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px;
+        border-bottom: 1px solid var(--limon);
+    }
+    .navbar-groupe-link{
+        flex-direction: column;
+        width: 90%;
+        margin: 15px auto;
+    }
+    .navbar-footer{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 15px auto;
+        gap: 15px;
+
+    }
+    .navbar-footer > *{
+        width: 50%;
+    }
+  }
+  
+  /* CSS for devices with a screen width of 901px and above */
+  @media only screen and (min-width: 901px) {
+    /* CSS rules for screens 901px wide and above */
+  }
+  

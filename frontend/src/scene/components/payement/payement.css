@@ -1,0 +1,45 @@
+/* src/components/PaymentMethods.css */
+.payment-method-container {
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .payment-card {
+    display: flex;
+    justify-content: space-between;
+  }
+  .action_card_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .card_content_pay{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .payment-card-img {
+    max-height: 250px;
+    object-fit: cover;
+  }
+  
+  .payment-card .ant-card-actions {
+    background-color: #fafafa;
+  }
+
+  
+  .payment-card .ant-btn {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+  }
+  
